@@ -8,11 +8,11 @@
             margin: 0;    
         }  
         .slider {  
-            display: none  
+            display: none;
+        }
+        .slider img {  
+                width: 100%;
         }  
-            .slider img {  
-                width: 100%;  
-            }  
         .container {  
             max-width: 1000px;  
             position: relative;  
@@ -32,11 +32,12 @@
             font-size: 18px;  
             transition: 0.6s ease;  
             border-radius: 0 3px 3px 0;
-            background-color: #f8f008; opacity: 0.5;  
+            color: #fff;
+            /*background-color: #f8f008; opacity: 0.5;*/  
         }  
         .right {  
             right: 0;  
-            border-radius: 3px 0 0 3px;  
+            border-radius: 3px 0 0 3px; 
         }  
             .left:hover, .right:hover {  
                 /*background-color: rgba(115, 115, 115, 0.8);*/  
@@ -50,7 +51,8 @@
             top: 500px;  
             width: 100%;  
             text-align: center;
-            background-color: #f8f008; opacity: 0.5; width: 300px; margin-left: 350px;
+            color: #fff;
+            /*background-color: #f8f008; opacity: 0.5; width: 300px; margin-left: 350px;*/
         }  
         .active {  
             background-color: #717171;  
@@ -60,8 +62,12 @@
             -webkit-animation-name: fade;  
             -webkit-animation-duration: 1.5s;  
             animation-name: fade;  
-            animation-duration: 1.5s;  
-        }  
+            animation-duration: 1.5s;
+            animation: 15s slider infinite; 
+        }
+        /*.slider{
+        	animation: 15s slider infinite;
+        }*/
         @-webkit-keyframes fade {  
             from {  
                 opacity: .4  
@@ -82,7 +88,7 @@
     </style>  
 </head>  
 <body>  
-    <div class="container">  
+    <div class="container">
         <div class="slider fade">  
             <img src="images/img2.jpg" height="600px;" width="800px;" />  
             <div class="content">Tree of codes first dance</div>  
@@ -96,18 +102,18 @@
             <img src="images/img4.jpg" height="600px;" width="800px;" />  
             <div class="content">Tree of codes last dance</div>  
         </div>
-        <div class="slider fade">  
+        <!-- <div class="slider fade">  
             <img src="images/img5.jpg" height="600px;" width="800px;" />  
             <div class="content">Carousel fisrt dance</div>  
         </div>  
         <div class="slider fade">  
             <img src="images/img6.jpg" height="600px;" width="800px;" />  
             <div class="content">Carousel last dance</div>  
-        </div>  
+        </div>   -->
         <!-- Navigation arrows -->  
-        <a class="left" onclick="nextSlide(-1)">Prev</a>  
-        <a class="right" onclick="nextSlide(1)">Next</a>  
-    </div>  
+        <a class="left" onclick="nextSlide(-1)">previous</a>  
+        <a class="right" onclick="nextSlide(1)">next</a>
+    </div>
   
     <script type="text/javascript">  
         var slide_index = 1;  

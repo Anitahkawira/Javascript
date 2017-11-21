@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>local storage</title>
+</head>
+<body>
+	<script src="jstorage.js"></script>
+	<script>
+		var jStorage = new jStorage();
+
+		jStorage.setItem('people',{
+		});
+
+		let people = xsession.getItem('people');
+
+		console.log(people);
+
+		let movies = xsession.getItem('movies');
+
+		console.log(movies);
+
+	</script>
+
+
+	<!-- <script type="text/javascript">
+		let contact ={
+			firstname:'Dinah',
+			lastname:'Kanjiru',
+			age:21
+		}
+		
+		localStorage.setItem('contact', JSON.stringify(contact));
+
+		let decodeContact = localStorage.getItem('contact');
+
+		decodeContact = JSON.parse(decodeContact)
+
+		console.log(decodeContact);
+		// localStorage.setItem('contact', contact);
+
+		// let myContact = localStorage.getItem('contact')
+
+		// console.log(contact);
+		
+	</script> -->
+
+</body>
+</html>
